@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   border-bottom: 3px solid black;
 }
@@ -9,6 +10,7 @@
   text-decoration: none;
   background-color: white;
   color: white;
+  flex-wrap: wrap;
 }
 
 .header-text {

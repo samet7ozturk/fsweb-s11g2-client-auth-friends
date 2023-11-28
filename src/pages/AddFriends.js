@@ -2,6 +2,7 @@ import { useHistory } from "react-router-dom";
 // import { AxiosInstance } from "../api/api";
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import Header from "../layout/Header";
 
 const AddFriendsPage = () => {
   //   const location = useLocation();
@@ -27,23 +28,27 @@ const AddFriendsPage = () => {
 
   return (
     <div>
-      <h1>ADD FRIEND</h1>
-      <hr />
-      <form onSubmit={handleSubmit(submitHandler)}>
-        <div>
-          <label>
-            FRIEND NAME
-            <input type="text" {...register("username")} />
-          </label>
-        </div>
-        <div>
-          <label>
-            FRIEND EMAIL
-            <input type="email" {...register("email")} />
-          </label>
-        </div>
-        <button type="submit">SUBMIT</button>
-      </form>
+      <Header />
+      <div className="loginpage">
+        <h1>ADD FRIEND</h1>
+        <form onSubmit={handleSubmit(submitHandler)}>
+          <div>
+            <label>
+              <p>FRIEND NAME</p>
+              <input type="text" {...register("username")} />
+            </label>
+          </div>
+          <div>
+            <label>
+              <p>FRIEND EMAIL</p>
+              <input type="email" {...register("email")} />
+            </label>
+          </div>
+          <button className="loginpage-button" type="submit">
+            SUBMIT
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

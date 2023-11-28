@@ -9,13 +9,7 @@ const HomePage = () => {
       <div>
         <Header />
       </div>
-      <main>
-        <button>
-          <Link to="/login" className="button1">
-            <span>FRIENDS</span>
-          </Link>
-        </button>
-      </main>
+      <main></main>
     </div>
   );
 };

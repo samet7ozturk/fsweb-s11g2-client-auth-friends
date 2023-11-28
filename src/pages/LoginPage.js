@@ -1,15 +1,13 @@
 import { useHistory } from "react-router-dom";
-// import { AxiosInstance } from "../api/api";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import Header from "../layout/Header";
 
+import "./LoginPage.css";
+
 const LoginPage = () => {
-  //   const location = useLocation();
   const history = useHistory();
   const { register, handleSubmit } = useForm();
-
-  //   console.log("Login location: ", location);
 
   const submitHandler = (data) => {
     console.log("data", data);
@@ -28,17 +26,19 @@ const LoginPage = () => {
         <form onSubmit={handleSubmit(submitHandler)}>
           <div>
             <label>
-              USERNAME
+              <p>USERNAME</p>
               <input type="text" {...register("username")} />
             </label>
           </div>
           <div>
             <label>
-              PASSWORD
+              <p>PASSWORD</p>
               <input type="password" {...register("password")} />
             </label>
           </div>
-          <button type="submit">SUBMIT</button>
+          <button className="loginpage-button" type="submit">
+            SUBMIT
+          </button>
         </form>
       </div>
     </div>

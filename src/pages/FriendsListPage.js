@@ -1,5 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Header from "../layout/Header";
+
+import "./FriendsListPage.css";
 
 const FriendsListPage = () => {
   const token = localStorage.getItem("token");
@@ -23,13 +26,18 @@ const FriendsListPage = () => {
 
   return (
     <div>
-      <h1>FRIEND LIST</h1>
-      <div>
-        {list.map((friend) => (
-          <div key={friend.id}>
-            {friend.name}-{friend.email}
-          </div>
-        ))}
+      <Header />
+      <div className="friendslist">
+        <h1>FRIENDS LIST</h1>
+        <div className="friendslist-list">
+          {list.map((friend) => (
+            <div key={friend.id}>
+              <p>
+                - {friend.name}-{friend.email}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

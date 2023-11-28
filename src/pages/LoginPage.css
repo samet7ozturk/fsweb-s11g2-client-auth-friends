@@ -1,3 +1,44 @@
 .loginpage {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginpage h1 {
+  font-size: 60px;
+  font-weight: 900;
+  margin: 5rem 0 1rem;
+}
+
+.loginpage p {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  background-color: black;
+  width: 20rem;
+  height: 4rem;
+  margin-bottom: 2rem;
+  padding: 0;
+  border: none;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.loginpage-button {
+  background-color: black;
+  color: white;
+  width: 20rem;
+  height: 4rem;
+  font-size: 20px;
+  font-weight: 900;
+  padding: 0;
+  border: none;
 }
