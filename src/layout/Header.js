@@ -11,6 +11,10 @@ const Header = () => {
           <div className="header-link-text">Home Page</div>
         </NavLink>
 
+        <NavLink className="header-link" to="/login" exact>
+          <div className="header-link-text">Log In</div>
+        </NavLink>
+
         <NavLink className="header-link" to="/friends">
           <div className="header-link-text">Friends List</div>
         </NavLink>
