@@ -15,7 +15,7 @@ const LoginPage = () => {
     axios.post("http://localhost:9000/api/login", data).then((res) => {
       console.log("post", res);
       localStorage.setItem("token", res.data.token);
-      history.push("/friendslist");
+      history.push("/friends");
     });
   };
 
