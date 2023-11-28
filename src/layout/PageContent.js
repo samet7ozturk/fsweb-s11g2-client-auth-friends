@@ -1,6 +1,7 @@
 import { Switch, Route } from "react-router-dom";
 import LoginPage from "../pages/LoginPage";
 import FriendsList from "../pages/FriendsListPage";
+import ProtectedPage from "../pages/ProtectedPage";
 
 const PageContent = () => {
   return (
@@ -11,7 +12,9 @@ const PageContent = () => {
         </Route>
 
         <Route path="/friendslist" exact>
-          <FriendsList />
+          <ProtectedPage>
+            <FriendsList />
+          </ProtectedPage>
         </Route>
 
         <Route path="*">
