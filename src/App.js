@@ -1,9 +1,12 @@
-import './App.css';
+import { useEffect } from "react";
+import "./App.css";
+import PageContent from "./layout/PageContent";
+import { AxiosInstance, renewAxiosInstance } from "./api/api";
 
 function App() {
   return (
     <div className="App">
-      <h1>Client Auth Projesi: Friends</h1>
+      <PageContent />
     </div>
   );
 }
