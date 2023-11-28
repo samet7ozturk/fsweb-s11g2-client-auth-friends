@@ -1,0 +1,12 @@
+main {
+  background-image: url("./friends_111612_1600.png");
+  background-size: cover;
+  background-position: center;
+  height: 97vh;
+  max-width: 100%;
+}
+
+.button1 {
+  text-decoration: none;
+  color: inherit;
+}
