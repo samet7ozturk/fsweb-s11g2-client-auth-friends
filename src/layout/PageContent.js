@@ -1,19 +1,31 @@
 import { Switch, Route } from "react-router-dom";
 import LoginPage from "../pages/LoginPage";
-import FriendsList from "../pages/FriendsListPage";
+import FriendsListPage from "../pages/FriendsListPage";
 import ProtectedPage from "../pages/ProtectedPage";
+import AddFriendsPage from "../pages/AddFriends";
+import HomePage from "../pages/HomePage";
 
 const PageContent = () => {
   return (
     <div>
       <Switch>
         <Route path="/" exact>
+          <HomePage />
+        </Route>
+
+        <Route path="/login" exact>
           <LoginPage />
         </Route>
 
-        <Route path="/friendslist" exact>
+        <Route path="/friends" exact>
           <ProtectedPage>
-            <FriendsList />
+            <FriendsListPage />
+          </ProtectedPage>
+        </Route>
+
+        <Route path="/friends/add" exact>
+          <ProtectedPage>
+            <AddFriendsPage />
           </ProtectedPage>
         </Route>
 
